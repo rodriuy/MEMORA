@@ -1,7 +1,8 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // Necesario para GitHub Pages
+  output: 'export',
+  basePath: '/MEMORA', // <-- ¡Esta es la línea que faltaba!
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
@@ -10,7 +11,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true, // Necesario para que las imágenes funcionen en un sitio estático
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
